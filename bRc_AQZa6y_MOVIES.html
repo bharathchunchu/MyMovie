@@ -1,0 +1,101 @@
+<html>
+        <body><html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 40px;
+    }
+
+    .search-container {
+      max-width: 400px;
+      margin-bottom: 20px;
+    }
+
+    #searchInput {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    #searchInput:focus {
+      border-color: #007bff;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 400px;
+    }
+
+    li {
+      background: #fff;
+      margin-bottom: 8px;
+      padding: 10px 15px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+<center><h1> HOLLYWOOD MOVIES </h1></center>
+  <div class="search-container">
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="Search movies..."
+      onkeyup="filterMovies()"
+    >
+  </div>
+
+  <ul id="movieList">
+    <li>Inception 8<img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg" width="100px"></li>
+    <li>Interstellar 10<img src="https://fc04.deviantart.net/fs71/f/2014/045/a/2/interstellar_by_visuasys-d6ibj30.jpg" width="100px"></li>
+    <li>The Dark Knight 9.5<img src="https://images.moviesanywhere.com/bd47f9b7d090170d79b3085804075d41/c6140695-a35f-46e2-adb7-45ed829fc0c0.jpg" width="100px></li>
+    <li>Avatar 9<img src="https://i.abcnewsfe.com/a/71bf1a7a-740c-45d7-a917-8ae1f9b745d4/avatar-2-ht-er-251211_1765481923495_hpEmbed_2x3.jpg"width="100px"></li>
+    <li>Titanic 8.5<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMtacRJ2Yl9h4fMnOdOVhop54Zq0u5FDd8Sg&s"width="100px"></li>
+    <li>Gladiator 9 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu9cs9OW8mninyKumPUpD3zRKTBw3K4rNRWQ&s"width="100px"></li>
+    <li>Jurassic Park <img src="https://m.media-amazon.com/images/I/81AGqBcpYOL._AC_UF1000,1000_QL80_.jpg"width="100px"></li>
+  </ul>
+
+  <script>
+    function filterMovies() {
+      const input = document.getElementById("searchInput");
+      const filter = input.value.toLowerCase();
+      const movies = document.querySelectorAll("#movieList li");
+
+      movies.forEach(movie => {
+        const text = movie.textContent.toLowerCase();
+        movie.style.display = text.includes(filter) ? "" : "none";
+      });
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html></body>
+        <style>h1{
+    background-color: skyblue;
+}
+body{
+    background-color: turquoise;
+}</style>
+        <script></script>
+      </html>
